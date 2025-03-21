@@ -1,0 +1,14 @@
+# Entorno virtual y dependencias
+venv/
+Pipfile.lock
+
+# Base de datos local
+db.sqlite3
+
+# Archivos de compilación y caché de Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Configuraciones del IDE
+.vscode/
