@@ -6,8 +6,8 @@ router = DefaultRouter()
 
  #Se agregan basename para mayor claridad, pero definiendo queryset pareciera no ser necesario este argumento
 router.register(r'users', UserViewSet, basename='user')
-router.register(r'category', CategoryViewSet, basename='category')
-router.register(r'product', ProductViewSet, basename='product')
+router.register(r'categories', CategoryViewSet, basename='category')
+router.register(r'products', ProductViewSet, basename='product')
 router.register(r'sales', SalesHistoryViewSet, basename='sales')
 
 urlpatterns = [
