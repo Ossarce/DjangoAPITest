@@ -1,10 +1,14 @@
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from  UserApp.views import USerViewSet
+from  UserApp.views import UserViewSet, CategoryViewSet, ProductViewSet, SalesHistoryViewSet
 
 router = DefaultRouter()
 
-router.register(r'users', USerViewSet, basename='user')
+ #Se agregan basename para mayor claridad, pero definiendo queryset pareciera no ser necesario este argumento
+router.register(r'users', UserViewSet, basename='user')
+router.register(r'category', CategoryViewSet, basename='category')
+router.register(r'product', ProductViewSet, basename='product')
+router.register(r'sales', SalesHistoryViewSet, basename='sales')
 
 urlpatterns = [
     path('', include(router.urls)),
