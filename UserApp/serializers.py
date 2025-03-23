@@ -16,7 +16,7 @@ class ProductSerializer(serializers.ModelSerializer):
         model = Product
         fields = '__all__'
 
-class SaleHistorySerializer(serializers.ModelSerializer):
+class SalesHistorySerializer(serializers.ModelSerializer):
     class Meta:
         model = SalesHistory
         fields = '__all__' 
