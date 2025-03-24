@@ -46,5 +46,5 @@ class ProductViewSet(viewsets.ModelViewSet):
     serializer_class = ProductSerializer
 
 class SalesHistoryViewSet(viewsets.ModelViewSet):
-    queryset = SalesHistory.objects.all()
+    queryset = SalesHistory.objects.select_related('user', 'product')
     serializer_class = SalesHistorySerializer
