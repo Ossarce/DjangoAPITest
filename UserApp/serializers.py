@@ -17,6 +17,8 @@ class ProductSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 class SalesHistorySerializer(serializers.ModelSerializer):
+    user_name = serializers.CharField(source='user.username', read_only=True)
+    product_name = serializers.CharField(source='product.name', read_only=True)
     class Meta:
         model = SalesHistory
         fields = '__all__' 
